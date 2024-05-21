@@ -1,0 +1,106 @@
+
+
+
+body{
+  background-image: url('./assets/background.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.golosinas-importadas{
+  background-image: url('./assets/golosinas-importadas.png');
+  background-size: cover;
+  border: 7px solid rgb(255, 255, 255);
+  border-radius: 10px 40px 10px 40px;
+  box-shadow: 5px 5px 15px rgba(252, 3, 157, 0.781);
+  width: 300px;
+  height: 300px;
+  transition: width 0.3s ease, height 0.3s ease;
+  
+}
+
+.ediciones-limitadas{
+  background-image: url('./assets/ediciones-limitadas.png');
+  background-size: cover;
+  border: 7px solid rgb(255, 255, 255);
+  border-radius: 10px 40px 10px 40px;
+  box-shadow: 5px 5px 15px rgba(252, 3, 157, 0.781);
+  width: 300px;
+  height: 300px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.nuestras-colaboraciones{
+  background-image: url('./assets/nuestras-colaboraciones.png');
+  background-size: cover;
+  border: 7px solid rgb(255, 255, 255);
+  border-radius: 10px 40px 10px 40px;
+  box-shadow: 5px 5px 15px rgba(252, 3, 157, 0.781);
+  width: 300px;
+  height: 300px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.second-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 600px;
+}
+
+
+.container-title-description{
+display: flex;
+flex-direction: column;
+}
+.description{
+  padding-bottom: 10px;
+  font-family: "Lobster Two", sans-serif;
+  color: #f7f6f6;
+  text-shadow: 2px 2px 4px rgba(84, 83, 83, 0.5);
+  font-weight: 800;
+  font-stretch: expanded;
+  font-size: 22px;
+}
+.principal-section{
+  padding-left: 200px;
+display: flex;
+justify-content: left;
+border: 5px solid rgba(255, 255, 255, 0.585);
+border-radius: 15px;
+background-color: rgba(249, 104, 152, 0.673);
+}
+.title{
+  color: rgb(244, 240, 243);
+  font-family: "Pacifico", cursive;
+  font-size: 90px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#root {
+  max-width: 2080px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.golosinas-importadas:hover {
+  width: 400px;
+  height: 400px;
+}
+
+.ediciones-limitadas:hover {
+  width: 400px;
+  height: 400px;
+}
+
+.nuestras-colaboraciones:hover {
+  width: 400px;
+  height: 400px;
+}
