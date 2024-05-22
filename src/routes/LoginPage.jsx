@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
-import { addUserToList } from '../components/listUsers/listUsers';
+import { usersArray } from '../components/listUsers/listUsers';
+import { useNavigate } from 'react-router-dom';
+import { HeaderComponent } from '../components/HeaderComponent';
+
 
 export const LoginPage = () => {
     const [formData, setFormData] = useState({
-        nombre: "",
         email: "",
         password: ""
     });
-    const [errorsValidate, setErrorsValidate] = useState([]);
+    const navigation = useNavigate()
+    const [errorsValidate, setErrorsValidated] = useState([]);
 
-    const formdataHandler = (e) => {
-        const { name, value } = e.target;
+    const formDataHandler = (e) => {
         setFormData({
             ...formData,
-            [name]: value.trim() !== "" ? value : ""
+            [e.target.name]: e.target.value.trim() !== "" ? e.target.value : undefined
         });
     };
 
@@ -21,60 +23,66 @@ export const LoginPage = () => {
         const errors = [];
         if (!formData) {
             errors.push({
-                name: "formData",
+                name: "form",
                 type: "alert",
                 description: "Formulario no definido"
             });
-        } else {
-            if (formData.nombre === "") {
-                errors.push({
-                    name: "nombre",
-                    type: "text",
-                    description: "Campo nombre requerido"
-                });
-            }
-            if (formData.email === "") {
-                errors.push({
-                    name: "email",
-                    type: "text",
-                    description: "Campo email requerido"
-                });
-            }
-            if (formData.password === "") {
-                errors.push({
-                    name: "password",
-                    type: "text",
-                    description: "Campo password requerido"
-                });
-            }
         }
-        return errors.length > 0 ? errors : undefined;
+        if (formData.email === "") {
+            errors.push({
+                name: "email",
+                type: "text",
+                description: "El campo email es requerido"
+            });
+        }
+        if (formData.password === "") {
+            errors.push({
+                name: "password",
+                type: "text",
+                description: "El campo password es requerido"
+            });
+        }
+        return errors.length != 0? errors : [];;
     };
 
-    const registerHandler = () => {
+    const sendFormLoginHandler = () => {
         const errors = validations();
-        if (errors) {
+        if (errors.length > 0) {
             const alertErrors = errors.filter(e => e.type === "alert");
-            alertErrors.forEach(a => alert(a.description));
-            setErrorsValidate(errors.filter(e => e.type === "text"));
+            alertErrors.forEach(alert => alert(alert.description));
+            setErrorsValidated(errors.filter(e => e.type === "text"));
         } else {
-            alert("Los datos han sido enviados");
-            addUserToList(formData)
-            setErrorsValidate([]);
+            usersArray.forEach((user) => {
+                if (user.email === formData.email && user.password === formData.password) {
+                    alert("email y password validos");
+                    navigation("/");
+
+                }
+                
+            });
         }
     };
 
     return (
         <>
-            <div>
-                {errorsValidate.map((error, index) => (
-                    <span key={index} style={{ color: "red" }}>{error.description}</span>
-                ))}
-                <input type="text" name="nombre" onChange={(e) => formdataHandler(e)} />
-                <input type="email" name="email" onChange={(e) => formdataHandler(e)} />
-                <input type="password" name="password" onChange={(e) => formdataHandler(e)} />
-                <button onClick={registerHandler}>Enviar</button>
+            <div className='login-container'>
+            <div className='bubble-login-container'>
+            {errorsValidate.map((error, index) => (
+                <span key={index} style={{ color: "red" }}>{error.description}</span>
+            ))}
+                <div className='container-form-login'>
+                 <div>
+                <label className='label-form'><b>email:  </b></label>
+                <input type="email" name="email" onChange={(e) => formDataHandler(e)} />
+                    </div>
+                    <div>
+                <label className='label-form'><b>password:  </b></label>
+                <input type="password" name="password" onChange={(e) => formDataHandler(e)} />
+                    </div>
+                <button onClick={(e) => sendFormLoginHandler()}>enviar</button>
             </div>
+            </div>
+                </div>
         </>
     );
 };

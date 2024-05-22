@@ -4,7 +4,9 @@ import './App.css';
 import Scene3DBall from './components/scene3D';
 import { PrincipalSection } from './components/principalSection';
 import { SecondSection } from './components/secondComponent';
+import { RegisterPage } from './routes/RegisterPage';
 import { LoginPage } from './routes/LoginPage';
+import { HeaderComponent } from './components/HeaderComponent';
 
 
 function App() {
@@ -14,24 +16,25 @@ function App() {
     return ( 
       <>
           <BrowserRouter>
+          <HeaderComponent/>
       <div>
         <div>
-          <h2>hola</h2>
-           <Link to={"/login"}>
-          <button>registrarse</button>
-          </Link>
           <Routes>
+          <Route path="/" element={
+                        <>
+                            <div className='principal-section'>
+                                <PrincipalSection />
+                                <Scene3DBall />
+                            </div>
+                            <SecondSection />
+                        </>
+                    } />
+            <Route path='/register' element={<RegisterPage/>}></Route>
             <Route path='/login' element={<LoginPage/>}></Route>
           </Routes>
         </div>
       </div>
-      <div className='principal-section'>
-        <PrincipalSection />
-        <Scene3DBall/>
-      </div>
-      <div>
-        <SecondSection />
-      </div>
+      
           </BrowserRouter>
      
       </>
