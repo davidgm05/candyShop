@@ -2,16 +2,11 @@ import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom';
 import { EdicionesLimitadas } from '../routes/edicionesLimitadas';
 import { NuestrasColaboraciones } from '../routes/nuestrasColaboraciones';
-import { GoloasinasImportadas } from '../routes/goloasinasImportadas';
+import { GolosinasImportadas } from '../routes/golosinasImportadas';
 
 export const SecondSection = () => {
   return (
     <>
-    <Routes>
-      <Route path='/golosinasimportadas' element={<GoloasinasImportadas/>}></Route>
-      <Route path='/edicioneslimitadas' element={<EdicionesLimitadas/>}></Route>
-      <Route path='/nuestrascolaboraciones' element={<NuestrasColaboraciones/>}></Route>
-    </Routes>
     <div className='second-section'>
       <Link to={"/golosinasimportadas"}>
         <div className='golosinas-importadas'></div>

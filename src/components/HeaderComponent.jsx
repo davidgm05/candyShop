@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const HeaderComponent = () => {
+export const HeaderComponent = ({userData}) => {
+  
   return (
     <>
     
@@ -10,6 +11,7 @@ export const HeaderComponent = () => {
                 <button>Pagina principal</button>
             </Link>
             <div className='name-user'>
+              <h1>{userData?.nombre}</h1>
             </div>
             <div className='register-button'>
             <Link to={"/register"}>

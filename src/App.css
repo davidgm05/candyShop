@@ -126,7 +126,10 @@ background-color: rgba(249, 104, 152, 0.673);
 .golosinas-importadas-page{
   width: 100vw;
   height: 100vh;
-  background-color: #fca3a5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .login-container{
   width: 100vw;
@@ -198,6 +201,18 @@ background-color: rgba(249, 104, 152, 0.673);
     height: 300px;
     background-color: #f7f6f6;
     box-shadow: 5px 5px 15px rgba(252, 3, 157, 0.781);
+  }
+
+  .name-user{
+    color: #fca3a5;
+    font-family: "Pacifico";
+  }
+
+  .name-user h1{
+    background-color: #ffffff;
+    padding: 0px 15px 0px 10px;
+    border-radius: 5px;
+    font-size: 30px;
   }
 
 .bubble-login-container {

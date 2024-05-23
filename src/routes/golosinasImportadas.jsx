@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const GoloasinasImportadas = () => {
+export const GolosinasImportadas = () => {
   return (
     <>
     <div className='golosinas-importadas-page'>

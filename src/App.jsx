@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Scene3DBall from './components/scene3D';
@@ -10,13 +10,12 @@ import { HeaderComponent } from './components/HeaderComponent';
 
 
 function App() {
-  
-  
+  const [userData, setUserData] = useState(null)
   
     return ( 
       <>
           <BrowserRouter>
-          <HeaderComponent/>
+          <HeaderComponent userData={userData}/>
       <div>
         <div>
           <Routes>
@@ -29,8 +28,9 @@ function App() {
                             <SecondSection />
                         </>
                     } />
+            
             <Route path='/register' element={<RegisterPage/>}></Route>
-            <Route path='/login' element={<LoginPage/>}></Route>
+            <Route path='/login' element={<LoginPage setUserData={setUserData}/>}></Route>
           </Routes>
         </div>
       </div>

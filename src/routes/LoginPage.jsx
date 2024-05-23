@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { HeaderComponent } from '../components/HeaderComponent';
 
 
-export const LoginPage = () => {
+export const LoginPage = ({setUserData}) => {
     const [formData, setFormData] = useState({
         email: "",
         password: ""
@@ -55,6 +55,7 @@ export const LoginPage = () => {
             usersArray.forEach((user) => {
                 if (user.email === formData.email && user.password === formData.password) {
                     alert("email y password validos");
+                    setUserData(user);
                     navigation("/");
 
                 }
