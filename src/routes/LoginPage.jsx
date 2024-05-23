@@ -67,21 +67,23 @@ export const LoginPage = () => {
         <>
             <div className='login-container'>
             <div className='bubble-login-container'>
+                <h2 className='login-title'>Login</h2>
             {errorsValidate.map((error, index) => (
                 <span key={index} style={{ color: "red" }}>{error.description}</span>
             ))}
                 <div className='container-form-login'>
                  <div>
-                <label className='label-form'><b>email:  </b></label>
+                <label className='label-form'><b>Email :  </b></label>
                 <input type="email" name="email" onChange={(e) => formDataHandler(e)} />
                     </div>
                     <div>
-                <label className='label-form'><b>password:  </b></label>
+                <label className='label-form'><b>Password :  </b></label>
                 <input type="password" name="password" onChange={(e) => formDataHandler(e)} />
                     </div>
-                <button onClick={(e) => sendFormLoginHandler()}>enviar</button>
+                <button onClick={(e) => sendFormLoginHandler()}>Enviar</button>
             </div>
             </div>
+            <div className='palo-piruleta'></div>
                 </div>
         </>
     );

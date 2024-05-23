@@ -7,16 +7,16 @@ export const HeaderComponent = () => {
     
     <div className='header-bar'>
           <Link to={"/"}>
-                <button>pagina principal</button>
+                <button>Pagina principal</button>
             </Link>
             <div className='name-user'>
             </div>
             <div className='register-button'>
             <Link to={"/register"}>
-                <button>register</button>
+                <button>Register</button>
             </Link>
             <Link to={"/login"}>
-                <button>login</button>
+                <button>Login</button>
             </Link>
           </div>
           </div>

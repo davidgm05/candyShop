@@ -70,25 +70,27 @@ export const RegisterPage = () => {
         <>
             <div className='register-container'>
             <div className='bubble-regiter-container'>
+                <h2 className='register-title'>Register</h2>
                 {errorsValidate.map((error, index) => (
                     <span key={index} style={{ color: "red" }}>{error.description}</span>
                 ))}
                 <div className='container-form-register'>
                     <div>
-                <label className='label-form'><b>nombre:  </b></label>
+                <label className='label-form'><b>Nombre :  </b></label>
                 <input type="text" name="nombre" onChange={(e) => formdataHandler(e)} />
                     </div>
                     <div>
-                <label className='label-form'><b>email:  </b></label>
+                <label className='label-form'><b>Email :  </b></label>
                 <input type="email" name="email" onChange={(e) => formdataHandler(e)} />
                     </div>
                     <div>
-                <label className='label-form'><b>password:  </b></label>
+                <label className='label-form'><b>Password :  </b></label>
                 <input type="password" name="password" onChange={(e) => formdataHandler(e)} />
                     </div>
                 <button onClick={registerHandler}>Enviar</button>
                 </div>
             </div>
+            <div className='palo-piruleta'></div>
             </div>
         </>
     );
