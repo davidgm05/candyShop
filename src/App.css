@@ -70,6 +70,7 @@ flex-direction: column;
   text-shadow: 2px 2px 4px rgba(84, 83, 83, 0.5);
   font-weight: 800;
   font-stretch: expanded;
+  text-align: center;
   font-size: 22px;
 }
 .principal-section{
@@ -84,6 +85,7 @@ background-color: rgba(249, 104, 152, 0.673);
 .title{
   color: rgb(244, 240, 243);
   font-family: "Pacifico", cursive;
+  text-align: center;
   font-size: 90px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -91,7 +93,6 @@ background-color: rgba(249, 104, 152, 0.673);
   max-width: 2080px;
   margin: 0 auto;
   
-  text-align: center;
 }
 
 .logo {
@@ -141,10 +142,12 @@ background-color: rgba(249, 104, 152, 0.673);
 }
 
 .register-title{
-  padding-top: 10px;
+  
   color: rgb(244, 240, 243);
   font-family: "Pacifico", cursive;
   font-size: 30px;
+  position: relative;
+  left: 100px;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(84, 83, 83, 0.5);
 }
@@ -154,6 +157,8 @@ background-color: rgba(249, 104, 152, 0.673);
   color: rgb(244, 240, 243);
   font-family: "Pacifico", cursive;
   font-size: 35px;
+  position: relative;
+  left: 110px;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(84, 83, 83, 0.5);
 }
@@ -238,4 +243,107 @@ background-color: rgba(249, 104, 152, 0.673);
 .nuestras-colaboraciones:hover {
   width: 400px;
   height: 400px;
+}
+
+@media (max-width: 400px){
+  .principal-section{
+    padding-left: 0px;
+    flex-direction: column;
+    width: 99.5vw;
+    margin: 0rem 0rem;
+    border: none;
+    border-radius: 0%;
+  }
+  .description{
+    max-width: 250px;
+    padding-bottom: 0px;
+    font-size: 20px;
+    padding-left: 4.5rem;
+    text-align: center;
+    
+  }
+  .title{
+    color: rgb(244, 240, 243);
+    font-family: "Pacifico", cursive;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .container-scene-3d{
+    position: relative;
+    right: 220px;
+  }
+  .second-section{
+    flex-direction: column;
+    height: 100%;
+    row-gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .golosinas-importadas{
+    width: 200px;
+    height: 200px;
+  }
+  .ediciones-limitadas{
+    width: 200px;
+    height: 200px;
+  }
+  .nuestras-colaboraciones{
+    width: 200px;
+    height: 200px;
+  }
+  .golosinas-importadas:hover {
+    width: 300px;
+    height: 300px;
+  }
+  .ediciones-limitadas:hover {
+    width: 300px;
+    height: 300px;
+  }
+  .nuestras-colaboraciones:hover {
+    width: 300px;
+    height: 300px;
+  }
+  .bubble-regiter-container {
+    width: 250px;
+    height: 250px;
+    }
+  .bubble-login-container {
+    width: 250px;
+    height: 250px; 
+  }
+  .container-form-register{
+    gap: 10px;
+    position: absolute;
+    top: 20px;
+    left: 80px; 
+    width: 90px;
+    align-items: center;
+  }
+  .label-form{
+    font-size: 15px;
+  }
+  .container-form-register input{
+    width: 120px;
+  }
+  .register-title{
+    position: relative;
+    bottom: 85px;
+    left: 70px;
+  font-size: 30px;
+  }
+  .container-form-login{
+    gap: 10px;
+    position: absolute;
+    top: 50px;
+    left: 80px; 
+    width: 90px;
+    align-items: center;
+  }
+  .login-title{
+    position: relative;
+    bottom: 80px;
+    left: 80px;
+  font-size: 30px;
+  }
 }

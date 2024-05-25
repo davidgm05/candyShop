@@ -42,7 +42,7 @@ export const LoginPage = ({setUserData}) => {
                 description: "El campo password es requerido"
             });
         }
-        return errors.length != 0? errors : [];;
+        return errors.length != 0? errors : [];
     };
 
     const sendFormLoginHandler = () => {

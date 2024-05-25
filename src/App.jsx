@@ -23,7 +23,9 @@ function App() {
                         <>
                             <div className='principal-section'>
                                 <PrincipalSection />
+                                <div className='container-scene-3d'>
                                 <Scene3DBall />
+                                </div>
                             </div>
                             <SecondSection />
                         </>
