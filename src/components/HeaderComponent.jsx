@@ -8,7 +8,7 @@ export const HeaderComponent = ({userData}) => {
     
     <div className='header-bar'>
           <Link to={"/"}>
-                <button>Pagina principal</button>
+                <button>Home</button>
             </Link>
             <div className='name-user'>
               <h1>{userData?.nombre}</h1>

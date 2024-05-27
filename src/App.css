@@ -107,7 +107,7 @@ background-color: rgba(249, 104, 152, 0.673);
   padding: 0rem 2rem;
   width: 10;
   height: 60px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -345,5 +345,8 @@ background-color: rgba(249, 104, 152, 0.673);
     bottom: 80px;
     left: 80px;
   font-size: 30px;
+  }
+  .name-user h1{
+   display: none;
   }
 }
